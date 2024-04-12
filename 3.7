@@ -1,0 +1,70 @@
+# original Invite list
+TLD_Friends = ['jim', 'malisa', 'greg']
+
+# Send invites to initial list
+messages = [f"Wanna go to Red Star {TLD_Friends[index].title()}?" for index in [0, 1, 2]]
+print("\n".join(messages))
+
+# Announce that Jim cannot join
+print("\nJim is not able to join us.")
+
+# Remove Jim from the list and replace with Steve
+TLD_Friends.remove('jim')
+TLD_Friends.insert(0, 'steve')
+
+# Send invites again with the updated list
+messages = [f"Wanna go to Red Star {friend.title()}?" for friend in TLD_Friends]
+print("\nHere are the new invites for Red Star - Hope you can make it:")
+print("\n".join(messages))
+
+#I found a bigger table so we can extend the guestlist
+TLD_Friends.insert(0, 'marlisa')
+TLD_Friends.insert(1, 'doug')
+TLD_Friends.append('jenny')
+
+#Info that I found a bigger table
+print("\nI found a bigger table - Lets all go!")
+
+#Sending updated invites again
+messages = [f"Wanna go to Red Star {friend.title()}?" for friend in TLD_Friends]
+print("\n".join(messages))
+
+# Announce the table won't be ready in time
+print("\nOh no, I just learned there is only a table for 3 available. I'm so sorry.")
+
+#removing 1st friend at a time form the list
+popped_TLD_Friend = TLD_Friends.pop()
+
+#Inform removed 1st friend they can't come
+print(f"I'm sorry but you can't come anymore, {popped_TLD_Friend.title()}.")
+
+#removing 2st friend at a time form the list
+popped_TLD_Friend = TLD_Friends.pop()
+
+#Inform removed 2st friend they can't come
+print(f"I'm sorry but you can't come anymore, {popped_TLD_Friend.title()}.")
+
+#removing 3st friend at a time form the list
+popped_TLD_Friend = TLD_Friends.pop()
+
+#Inform removed 3st friend they can't come
+print(f"I'm sorry but you can't come anymore, {popped_TLD_Friend.title()}.")
+
+#removing 4st friend at a time form the list
+popped_TLD_Friend = TLD_Friends.pop()
+
+#Inform removed 4st friend they can't come
+print(f"I'm sorry but you can't come anymore, {popped_TLD_Friend.title()}.")
+
+#Info who is still invited
+messages = [f"Are you still coming {friend.title()}?" for friend in TLD_Friends]
+print("\n".join(messages))
+
+#now removing everyone from the list with del
+del TLD_Friends[0]
+del TLD_Friends[0]
+
+
+#check if list is really 
+print("\nHere is the empty list.")
+print(TLD_Friends)
