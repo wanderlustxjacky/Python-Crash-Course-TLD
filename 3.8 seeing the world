@@ -1,0 +1,46 @@
+
+#places i like to visit
+places=['vietnam', 'thailand', 'peru', 'andorra', 'south-africa', 'brazil']
+
+#rawlist
+print(places)
+
+#sorted list
+print("\nHere is the alphabetical list.")
+print(sorted(places))
+
+#original order
+print("\nOriginal list:")
+print(places)
+
+#reverse order
+print("\nHere is the reverse list.")
+print(sorted(places, reverse=True))
+
+#original order
+print("\nOriginal list:")
+print(places)
+
+#change order with reverse
+print("\nHere is the changed reverse list:")
+places.reverse()
+print(places)
+
+#original list again so it shows it's changed now
+print("\nNew Original list:")
+print(places)
+
+#change order with reverse to original order
+print("\nHere is the original list again switched with reverse:")
+places.reverse()
+print(places)
+
+#use sort to change the order permanently 
+print("\nHere is the new alphabetically list:")
+places.sort()
+print(places)
+
+#use sort to change the order permanently in reverse
+print("\nHere is the new reverse alphabetically list:")
+places.sort(reverse=True)
+print(places)
