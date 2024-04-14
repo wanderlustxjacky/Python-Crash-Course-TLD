@@ -1,0 +1,84 @@
+#List of Languages
+languages = ['mandarin', 'spanish', 'french', 'hindi', 'arabic', 'russian', 'japanese']
+print("\nList of Languages:")
+print(', '.join([language.title() for language in languages]))
+
+#First I want to find the length of the list
+print("\nNumber of Languages:")
+len(languages)
+print(len(languages))
+
+#Now I want to sort them temp 
+print("\nTemp alphabetical order of languages:")
+print(sorted(languages))
+
+#Now I want to reverse the order from the original list perm 
+print("\nPerm reverse order of languages:")
+languages.reverse()
+print(languages)
+
+#Now I want to alphabetical order the original list perm 
+print("\nPerm alphabetical order:")
+languages.sort()
+print(languages)
+
+#Now I want to reverse alphabetical order the original list perm 
+print("\nPerm reverse alphabetical order:")
+languages.sort(reverse=True)
+print(languages)
+
+#Now I want the 3rd language on the list
+print("\nThe third Language on the list:")
+print(languages[2].title())
+
+#Now I want the 2nd & 5th language on the list
+print("\nThe 1st & 5th Language on the list:")
+print(languages[0].title())
+print(languages[4].title())
+
+#Now I want the last language on the list
+print("\nThe last Language on the list:")
+print(languages[-1].title())
+
+#Now I want talk about the language I already learned a bit
+message = f"I learned 2 years of {languages[5].title()} in school."
+print("\n" + message)
+
+#Now I will change russian for english
+languages[1] = 'english'
+print("\nI now exchanged Russian to English in the list. Here is the new list:")
+print(', '.join([language.title() for language in languages]))
+
+#Now I will add Russian back in
+languages.append('russian')
+print("\nI now added Russian again. Here is the new list:")
+print(', '.join([language.title() for language in languages]))
+
+#Now the list is out of order, we need to sort it again
+print("\nNow we have a Temp alphabetical order of languages again:")
+print(', '.join([language.title() for language in sorted(languages)]))
+
+#Now I will add German and sort the list permanently
+languages.insert(0, 'german')
+languages.sort()
+print("\nI now added German and sorted the list perm again. Here is the new list:")
+print(', '.join([language.title() for language in languages]))
+
+#Now I remove the languages I speak fluently
+del languages[1]
+del languages[2] #note here del one removes form the list - therefore the new number on the list is different
+print("\nI removed the languages I speak fluently. Here is the new list:")
+print(', '.join([language.title() for language in languages]))
+
+#Now I remove the languages I think is the hardest
+hardest_language = languages.pop(0)
+message = f"I think {hardest_language.title()} is the hardest language of the list."
+print("\n" + message)
+
+#Now I remove the languages spanish without knowing the position on the list
+useful_language = 'spanish'
+languages.remove(useful_language)
+message = f"I think {useful_language.title()} would be a good language to learn."
+print("\n" + message)
+
+
