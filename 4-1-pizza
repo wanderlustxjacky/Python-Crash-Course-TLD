@@ -1,0 +1,3 @@
+pizzas = ['hawaii', 'margherita', 'capricciosa']
+for pizza in pizzas: print(f"{pizza.title()}, is my favourite pizza.")
+print("I really love pizza!")
