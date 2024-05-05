@@ -1,0 +1,21 @@
+# List of animals
+animals = ['lion', 'tiger', 'cheetah']
+
+# Create a string with all names capitalized and joined by a space
+capitalized_animals = ' '.join([animal.capitalize() for animal in animals])
+
+# Print the capitalized names on one line with a custom message
+print(f"This is my list: {capitalized_animals}\n")
+
+# Statement about each animal
+for animal in animals:
+    print(f"The {animal.capitalize()} is known for its remarkable strength and speed.")
+    if animal == 'lion':
+        print(f"The {animal.capitalize()} has the biggest roar.\n")
+    elif animal == 'tiger':
+        print(f"The {animal.capitalize()} has the most stripes.\n")
+    elif animal == 'cheetah':
+        print(f"The {animal.capitalize()} is the fastest.\n")
+
+# Statement about each animal
+print("\nThey are all big cats.")
