@@ -1,0 +1,15 @@
+# Starting list of pizzas
+pizzas = ['hawaii', 'margherita', 'capricciosa']
+
+# Using a for loop to print each pizza
+print("List of Pizzas:")
+for pizza in pizzas:
+    print(pizza.capitalize())
+
+# Additional list of desserts
+desserts = ['tiramisu', 'gelato', 'panna cotta']
+
+# Using a for loop to print each dessert
+print("List of Desserts:")
+for dessert in desserts:
+    print(dessert.capitalize())
