@@ -1,0 +1,34 @@
+#4-3 Counting to twenty
+for number in range(1, 21):
+    print(number)
+
+#4-4 One Million
+# Note: Printing this many numbers can slow down the system significantly
+#numbers = list(range(1, 1000001))
+#for number in numbers:
+    #print(number) # Uncomment to print the numbers if needed
+
+#Exercise 4-5: Summing a Million
+numbers = list(range(1, 1000001))
+print("Minimum:", min(numbers))
+print("Maximum:", max(numbers))
+print("Sum:", sum(numbers))
+
+#Exercise 4-6: Odd Numbers - To generate and print all odd numbers from 1 to 20
+for number in range(1, 21, 2):
+    print(number)
+
+#Exercise 4-7: Threes - To create a list of multiples of 3 from 3 to 30 and print them:
+threes = list(range(3, 31, 3))
+for number in threes:
+    print(number)
+
+#Exercise 4-8: Cubes - To generate the first 10 cubes (from 1^3 to 10^3) and print them:
+for number in range(1, 11):
+    cube = number ** 3
+    print(cube)
+
+#Exercise 4-9: Cube Comprehension - To use list comprehension to generate a list of the first 10 cubes:
+cubes = [number ** 3 for number in range(1, 11)]
+print(cubes)
+
