@@ -1,0 +1,20 @@
+# Starting list of pizzas
+pizzas = ['hawaii', 'margherita', 'capricciosa']
+
+# Make a copy of the list of pizzas and call it friend_pizzas
+friend_pizzas = pizzas[:]
+
+# Add a new pizza to the original list
+pizzas.append('meat feast')
+
+# Add a different pizza to the list friend_pizzas
+friend_pizzas.append('veggie')
+
+# Print both lists to prove they are separate
+print("My favorite pizzas are:")
+print(', '.join([pizza.capitalize() for pizza in pizzas]))
+
+
+print("My friend's favorite pizzas are:")
+print(', '.join([friend_pizza.capitalize() for friend_pizza in friend_pizzas]))
+
