@@ -1,0 +1,18 @@
+# Define the initial tuple
+foods = ('pizza', 'salad', 'soup', 'chicken', 'rice')
+
+# Print the original menu
+print("Original menu:")
+for food in foods:
+    print(food.capitalize())
+
+# Attempt to modify the tuple (should fail)
+    #foods[0] = 'pasta' (fails)
+
+# Rewrite the tuple to change the menu
+foods = ('pizza', 'salad', 'soup', 'fish', 'beans')
+
+# Print the revised menu
+print("\nRevised menu:")
+for food in foods:
+    print(food.capitalize())
