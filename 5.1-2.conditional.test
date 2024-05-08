@@ -1,0 +1,55 @@
+# Sample book inventory
+library_books = {
+    'Red Rising': {'available': 3, 'age_limit': 18, 'genre': 'Science Fiction'},
+    '1984': {'available': 0, 'age_limit': 16, 'genre': 'Dystopian'},
+    'DCC': {'available': 5, 'age_limit': 12, 'genre': 'Fantasy'}
+}
+
+# User data
+users = {
+    'Jim': {'age': 49, 'favorite_genre': 'Fantasy'},
+    'James': {'age': 30, 'favorite_genre': 'Science Fiction'},
+    'Anna': {'age': 12, 'favorite_genre': 'Science Fiction'}
+}
+
+# Function to check book availability and user age restriction with detailed output
+def checkout_book(user, book):
+    print(f"Checking out {book} for {user}:")
+    if book not in library_books:
+        print(f"Is the book {book} in our library? False")
+        return "This book is not in our library."
+    print(f"Is the book {book} in our library? True")
+    
+    if library_books[book]['available'] == 0:
+        print(f"Is {book} available? False")
+        return "This book is currently not available."
+    print(f"Is {book} available? True")
+    
+    if users[user]['age'] < library_books[book]['age_limit']:
+        print(f"Is {user} old enough to check out {book}? False")
+        return f"{book} has an age restriction and cannot be checked out by {user}."
+    print(f"Is {user} old enough to check out {book}? True")
+    
+    library_books[book]['available'] -= 1
+    return f"{book} has been successfully checked out by {user}."
+
+# Function to recommend a book based on favorite genre with detailed output
+def recommend_book(user):
+    print(f"Recommending a book for {user} based on favorite genre {users[user]['favorite_genre']}:")
+    favorite_genre = users[user]['favorite_genre'].lower()
+    for book, details in library_books.items():
+        print(f"Checking {book}:")
+        in_genre = favorite_genre in book.lower() or favorite_genre == details['genre'].lower()
+        print(f"Does {book} match the genre {favorite_genre}? {in_genre}")
+        if in_genre and details['available'] > 0:
+            print(f"Is {book} available? True")
+            return f"{user}, we recommend {book} based on your interest in {users[user]['favorite_genre'].lower()}."
+        elif in_genre:
+            print(f"Is {book} available? False")
+    return "Sorry, we don't have any books in your favorite genre available at the moment."
+
+# Example usage:
+print(checkout_book('Jim', 'DCC'),'\n')  # Checkout book
+print(checkout_book('Anna', 'Red Rising'),'\n')  # Age restriction and book availability
+print(recommend_book('James'),'\n')  # Recommend based on favorite genre
+
